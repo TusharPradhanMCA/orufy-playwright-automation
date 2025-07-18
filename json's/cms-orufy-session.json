@@ -1,0 +1,30 @@
+{
+  "cookies": [],
+  "origins": [
+    {
+      "origin": "https://betacms.orufy.in",
+      "localStorage": [
+        {
+          "name": "navbar-condensed",
+          "value": "false"
+        },
+        {
+          "name": "userInfo",
+          "value": "{\"id\":18,\"firstname\":\"tushar\",\"lastname\":\"pardhan\",\"username\":null,\"email\":\"tushar@orufy.com\",\"isActive\":true,\"blocked\":false,\"preferedLanguage\":null,\"createdAt\":\"2025-06-17T06:51:23.762Z\",\"updatedAt\":\"2025-06-17T06:54:37.263Z\"}"
+        },
+        {
+          "name": "STRAPI_THEME",
+          "value": "light"
+        },
+        {
+          "name": "strapi-admin-language",
+          "value": "en"
+        },
+        {
+          "name": "jwtToken",
+          "value": "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsImlhdCI6MTc1MDQxMjMwNiwiZXhwIjoxNzUzMDA0MzA2fQ.Cq2K7ZptqNmC7WU7b-E2m5iIH4MpCsGzTi5eNYYbu4I\""
+        }
+      ]
+    }
+  ]
+}

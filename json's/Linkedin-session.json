@@ -1,0 +1,219 @@
+{
+  "cookies": [
+    {
+      "name": "lang",
+      "value": "v=2&lang=en-us",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "JSESSIONID",
+      "value": "\"ajax:9095053632729994837\"",
+      "domain": ".www.linkedin.com",
+      "path": "/",
+      "expires": 1758613718.157798,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "bcookie",
+      "value": "\"v=2&41a2565d-6141-42d4-8135-8a3dd97fa3da\"",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": 1782373719.157821,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "bscookie",
+      "value": "\"v=1&20250625074834f7ed78f5-583b-4b5b-8481-a7ff1230655dAQHtsU6EstKJeubD2CIu2-dwzqfBHx8u\"",
+      "domain": ".www.linkedin.com",
+      "path": "/",
+      "expires": 1782373719.157854,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "demdex",
+      "value": "63294365058771356100897357230277617599",
+      "domain": ".demdex.net",
+      "path": "/",
+      "expires": 1766389718.425924,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "AMCVS_14215E3D5995C57C0A495C55%40AdobeOrg",
+      "value": "1",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "AMCV_14215E3D5995C57C0A495C55%40AdobeOrg",
+      "value": "-637568504%7CMCIDTS%7C20265%7CMCMID%7C62761924641182646250917364990692922484%7CMCAAMLH-1751442517%7C12%7CMCAAMB-1751442517%7C6G1ynYcLPuiQxYZrsz_pkqfLG9yMXBpb2zX5dvJdYQJzPXImdj0y%7CMCOPTOUT-1750844917s%7CNONE%7CvVersion%7C5.1.1",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": 1766389717,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "aam_uuid",
+      "value": "63294365058771356100897357230277617599",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": 1753429717,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gcl_au",
+      "value": "1.1.1690238008.1750837718",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": 1758613718,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "dextp",
+      "value": "771-1-1750837717949|1957-1-1750837718069",
+      "domain": ".demdex.net",
+      "path": "/",
+      "expires": 1766389718,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "li_rm",
+      "value": "AQHpC3TnowVRXwAAAZemD2yoMpGI43C0gg99xObTAjitIUo6JW-CVCIsyaqSqoxN8TYi9xYAn8yjIA09UeO23TZeX-Bya6UQbgoGt7FF8B3V_dUcVz6yyBmFj5kTQUxSiXwIT3ahqFuye25WDYt-rtIOdYcXDkQm1bB44cqyNo3xOh5ReBfk8neT8p5-q0Lhgr5d4QgKxKhnnWYBghQJHp9iu0mNdEPmw6BmSQolsqLzExzXeBY9MV8XIWGD4mMI_dNbyFi_gR_F2pnZ4EkagMDKCyDGjK_f0ga_y9Y_I5yERMVVYZ7SLxDIMA7ofCE_mY9YAGDRnQA8QLn5J4gZGg",
+      "domain": ".www.linkedin.com",
+      "path": "/",
+      "expires": 1782373718.157572,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "liap",
+      "value": "true",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": 1758613718.157735,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "li_at",
+      "value": "AQEDASoICe4FnAZeAAABl6YPbGoAAAGXyhvwalYAOEwpEGPL_4S0zi94XS0r3LwzxYfjwJzyRvOO7iJik3FapLxwb4Gyy99z3crVlb2Arikg5jplMKvkJNu-1f3XDotKRGk92lKUoOSTx0LVFK4bJzt8",
+      "domain": ".www.linkedin.com",
+      "path": "/",
+      "expires": 1782373718.157765,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "MUID",
+      "value": "29F66FE7E2D66BAF0B0879F1E3246A28",
+      "domain": ".bing.com",
+      "path": "/",
+      "expires": 1784533719.333321,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "MR",
+      "value": "0",
+      "domain": ".c.bing.com",
+      "path": "/",
+      "expires": 1751442519.333409,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "IDE",
+      "value": "AHWqTUmU3enVBeWuVNmJyU0GGBgKJJFPcx8g7MSWInJnChIWrUzUozkysE9ovKybKsQ",
+      "domain": ".doubleclick.net",
+      "path": "/",
+      "expires": 1785397718.404062,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "receive-cookie-deprecation",
+      "value": "1",
+      "domain": ".doubleclick.net",
+      "path": "/",
+      "expires": 1766389718.463875,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "dpm",
+      "value": "63294365058771356100897357230277617599",
+      "domain": ".dpm.demdex.net",
+      "path": "/",
+      "expires": 1766389718.425963,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "lidc",
+      "value": "\"b=OB02:s=O:r=O:a=O:p=O:g=4764:u=606:x=1:i=1750837718:t=1750873691:v=2:sig=AQGTDNGArVtr9VVeFPt4UM1AyY9tenIm\"",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": 1750873691.510188,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "NID",
+      "value": "525=cjWEfzZrPCUu9tV_3URdo4KGD2sOyJOx_qax2mUbTOVymi7hpgmGNMvFqlr9VdpuuRZ824Fty0Reqp5IZZfhiCgNFeCq5Jnb3Jotwjb8qPw6PgQsrXac1kjSOzxlUNFh1Dq21abc32YfPdHPrtJ8lSjVizTUu0kwR6NS3N1nOD0Ar1UFTxNF0fXyMPu_8OoD",
+      "domain": ".google.com",
+      "path": "/",
+      "expires": 1766648918.79103,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://www.linkedin.com",
+      "localStorage": [
+        {
+          "name": "voyager-web:new-tab-beacon",
+          "value": "[]"
+        },
+        {
+          "name": "_gcl_ls",
+          "value": "{\"schema\":\"gcl\",\"version\":1,\"gcl_ctr\":{\"value\":{\"value\":1,\"creationTimeMs\":1750837718211},\"expires\":1758613718211}}"
+        }
+      ]
+    }
+  ]
+}

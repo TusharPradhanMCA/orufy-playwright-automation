@@ -1,0 +1,284 @@
+{
+  "cookies": [
+    {
+      "name": "CLID",
+      "value": "75f30d0395d04214bc9058d84c1f1d3a.20250612.20260612",
+      "domain": "www.clarity.ms",
+      "path": "/",
+      "expires": 1781259393.478304,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_clck",
+      "value": "7fa585%7C2%7Cfwp%7C0%7C1989",
+      "domain": ".orufy.com",
+      "path": "/",
+      "expires": 1781259393,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_gcl_au",
+      "value": "1.1.1206331584.1749723394",
+      "domain": ".orufy.com",
+      "path": "/",
+      "expires": 1757499393,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga",
+      "value": "GA1.1.271482234.1749723394",
+      "domain": ".orufy.com",
+      "path": "/",
+      "expires": 1784283393.829602,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_fbp",
+      "value": "fb.1.1749723394030.672054985852254418",
+      "domain": ".orufy.com",
+      "path": "/",
+      "expires": 1757499394,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "li_sugr",
+      "value": "325a2e0a-56b0-4504-95e1-745d47f6435c",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": 1757499395.007602,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "bcookie",
+      "value": "\"v=2&4b52d898-3c69-41e5-864a-e129d13101ff\"",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": 1781259395.007717,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "lidc",
+      "value": "\"b=OGST00:s=O:r=O:a=O:p=O:g=3677:u=1:x=1:i=1749723394:t=1749809794:v=2:sig=AQEUX3WhlzuhwBdch2QRkmeTQu59IFOy\"",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": 1749809795.198169,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_clsk",
+      "value": "v4o30s%7C1749723394427%7C1%7C1%7Cz.clarity.ms%2Fcollect",
+      "domain": ".orufy.com",
+      "path": "/",
+      "expires": 1749809794,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "UserMatchHistory",
+      "value": "AQKXfRWQsSmPFAAAAZdjpDDbeiMEf4SSbzAsZLGoNvw_NdbQH9BvvXWdU5LrKzqVKvTy-mePCTjJ2A",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": 1752315394.461152,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "AnalyticsSyncHistory",
+      "value": "AQLKj3dyWpdQtQAAAZdjpDDbDi8MW7PpUVRXwd5iYv6idl5HohM5vLHcD0Vxd4EHeiv8a32_fxVnc1_8mE00-Q",
+      "domain": ".linkedin.com",
+      "path": "/",
+      "expires": 1752315394.461182,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "IDE",
+      "value": "AHWqTUkC-lcb8YZ7Iulmpw8n_VDBlSTlXiScDgPJglNgrCQMOzIPETD61NB9ouZQ",
+      "domain": ".doubleclick.net",
+      "path": "/",
+      "expires": 1784283394.567573,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "bscookie",
+      "value": "\"v=1&202506121016347dbb0215-f1ee-412a-8935-dc37296ba5abAQGgd4QQq8CWFoGBK-e6E9SqX86jRAi4\"",
+      "domain": ".www.linkedin.com",
+      "path": "/",
+      "expires": 1781259394.759698,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "MUID",
+      "value": "0284CEBFCE9A68103C5DD8B6CF9C6921",
+      "domain": ".bing.com",
+      "path": "/",
+      "expires": 1783419395.737861,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "MR",
+      "value": "0",
+      "domain": ".c.bing.com",
+      "path": "/",
+      "expires": 1750328195.737933,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "SRM_B",
+      "value": "0284CEBFCE9A68103C5DD8B6CF9C6921",
+      "domain": ".c.bing.com",
+      "path": "/",
+      "expires": 1783419395.737963,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "SM",
+      "value": "C",
+      "domain": ".c.clarity.ms",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "MUID",
+      "value": "0284CEBFCE9A68103C5DD8B6CF9C6921",
+      "domain": ".clarity.ms",
+      "path": "/",
+      "expires": 1783419396.877399,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "MR",
+      "value": "0",
+      "domain": ".c.clarity.ms",
+      "path": "/",
+      "expires": 1750328196.877474,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "ANONCHK",
+      "value": "0",
+      "domain": ".c.clarity.ms",
+      "path": "/",
+      "expires": 1749723996.877505,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "__session",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJJZCI6IjY4NGFhMDM1NTQ2OTgxNGI3MmI0YTNkZiIsInByb2plY3RzQXBwIjp7ImNvbXBhbnlJZCI6IjY4NGFhMDRkNzJmY2MwMzg4NDcwMjY3ZiJ9LCJjaGF0QXBwIjp7ImNvbXBhbnlJZCI6IjY4NGFhMTM5MWRiZGViNzllOTU0NDVkMyJ9fSwiaWF0IjoxNzQ5NzIzMzk2LCJleHAiOjE3NTc0OTkzOTZ9.xVobL7fR-zmaZvVMsKyx_PtRI0e0t8wLwQ5z7Jqx3bA",
+      "domain": ".orufy.com",
+      "path": "/",
+      "expires": 1757499396.520152,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_5F8LYW5Z54",
+      "value": "GS2.1.s1749723393$o1$g0$t1749723396$j57$l0$h0",
+      "domain": ".orufy.com",
+      "path": "/",
+      "expires": 1784283396.905333,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://projects.orufy.com",
+      "localStorage": [
+        {
+          "name": "meMode-684aa06fd00730dfcc81d488",
+          "value": "false"
+        },
+        {
+          "name": "showSubTasks-684aa06fd00730dfcc81d488",
+          "value": "true"
+        },
+        {
+          "name": "groupBy-684aa06fd00730dfcc81d488",
+          "value": "{\"label\":\"Status\",\"value\":\"status\",\"type\":\"STATUS\"}"
+        },
+        {
+          "name": "showFiltersStripe684aa06fd00730dfcc81d488",
+          "value": "true"
+        },
+        {
+          "name": "view-684aa06fd00730dfcc81d488",
+          "value": "\"board\""
+        },
+        {
+          "name": "columns-684aa06fd00730dfcc81d488",
+          "value": "[]"
+        },
+        {
+          "name": "showClosed-684aa06fd00730dfcc81d488",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "origin": "https://orufy.com",
+      "localStorage": [
+        {
+          "name": "lastExternalReferrer",
+          "value": "other"
+        },
+        {
+          "name": "_gcl_ls",
+          "value": "{\"schema\":\"gcl\",\"version\":1,\"gcl_ctr\":{\"value\":{\"value\":0,\"creationTimeMs\":1749723393661},\"expires\":1757499393661}}"
+        },
+        {
+          "name": "lastExternalReferrerTime",
+          "value": "1749723394023"
+        },
+        {
+          "name": "li_adsId",
+          "value": "59fbe178-a2c4-4c40-a8cc-cefa17f4e54f"
+        },
+        {
+          "name": "topicsLastReferenceTime",
+          "value": "1749723394652"
+        }
+      ]
+    }
+  ]
+}

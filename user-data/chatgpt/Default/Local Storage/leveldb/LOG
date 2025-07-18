@@ -1,0 +1,7 @@
+2025/06/12-17:30:25.937 4b28 Reusing MANIFEST c:\Users\deepa\Desktop\AUTOMATION\user-data\chatgpt\Default\Local Storage\leveldb/MANIFEST-000001
+2025/06/12-17:30:25.969 4b28 Recovering log #3
+2025/06/12-17:30:25.977 4b28 Level-0 table #3: started
+2025/06/12-17:30:25.983 4b28 Level-0 table #3: 14391 bytes OK
+2025/06/12-17:30:25.983 4b28 Recovering log #4
+2025/06/12-17:30:25.986 4b28 Reusing old log c:\Users\deepa\Desktop\AUTOMATION\user-data\chatgpt\Default\Local Storage\leveldb/000004.log 
+2025/06/12-17:30:26.021 4b28 Delete type=0 #3
