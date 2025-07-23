@@ -2,11 +2,7 @@ const { chromium } = require('playwright');
 const path = require('path');
 
 async function run(index) {
-  const browser = await chromium.launch({
-    headless: false,
-    args: ['--start-maximized']
-  });
-
+  const browser = await chromium.launch({ headless: false, args: ['--start-maximized'] });
   const context = await browser.newContext({
     storageState: path.join(__dirname, '../json\'s/beta-orufy-session.json'),
     viewport: null
@@ -66,11 +62,7 @@ async function run(index) {
       await embedPre.waitFor({ state: 'visible', timeout: 5000 });
 
       const rawEmbed = await embedPre.innerText();
-      const decodedEmbed = rawEmbed
-        .replace(/&lt;/g, '<')
-        .replace(/&gt;/g, '>')
-        .replace(/&amp;/g, '&')
-        .trim();
+      const decodedEmbed = rawEmbed.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&').trim();
 
       newTab = await context.newPage();
 
@@ -83,7 +75,7 @@ async function run(index) {
               extractedChatId = json.data.chatId;
               console.log(`✅ Chat ID received: ${extractedChatId}`);
             }
-          } catch (e) {}
+          } catch (e) { }
         }
       });
 
@@ -109,7 +101,6 @@ async function run(index) {
     try {
       const widgetIcon = iframe.locator('button[class*="_widget-icon_"]');
       await widgetIcon.waitFor({ state: 'visible', timeout: 5000 });
-      await newTab.waitForTimeout(1000);
       await widgetIcon.click();
       console.log('✅ Widget icon clicked');
       await newTab.waitForTimeout(1500);
@@ -117,72 +108,133 @@ async function run(index) {
       console.warn('⚠️ Widget icon not found or not clickable:', err);
     }
 
-    const chatsIcon = iframe.locator('button:has(span:text("Chats"))');
-    try {
-      await chatsIcon.waitFor({ state: 'visible', timeout: 5000 });
-      await chatsIcon.scrollIntoViewIfNeeded();
-      await chatsIcon.click();
-      console.log('✅ Chats icon clicked inside widget');
-      await newTab.waitForTimeout(1000);
-    } catch (e) {
-      console.warn('⚠️ Chats icon not found or not clickable:', e);
-    }
-
-    try {
-      const vectorIcon = iframe.locator('div.inline-block.bg-current.h-5.w-5');
-      await vectorIcon.waitFor({ state: 'visible', timeout: 5000 });
-      const clickableParent = vectorIcon.locator('..');
-      await clickableParent.click();
-      console.log('✅ Vector masked icon clicked');
-      await newTab.waitForTimeout(1000);
-    } catch (e) {
-      console.warn('⚠️ Vector icon button not found or not clickable:', e);
-    }
-
-    let widgetReady = false;
-    for (let i = 0; i < 10; i++) {
-      const msgBox = iframe.locator('textarea[placeholder="Write your message..."]');
-      const nameInput = iframe.locator('input[placeholder="Enter Full Name"]');
-      if (
-        await msgBox.isVisible().catch(() => false) ||
-        await nameInput.isVisible().catch(() => false)
-      ) {
-        widgetReady = true;
-        break;
-      }
-      await newTab.waitForTimeout(500);
-    }
-
-    if (!widgetReady) {
-      throw new Error('❌ Widget did not load message box or pre-chat form.');
-    }
-
-    const timestamp = Date.now();
-    const name = `John${timestamp}`;
-    const email = `john${timestamp}@test.com`;
-    const phone = `+9198${timestamp.toString().slice(-8)}`;
-
-    const fullNameField = iframe.locator('input[placeholder="Enter Full Name"]');
-    if (await fullNameField.isVisible({ timeout: 3000 }).catch(() => false)) {
-      console.log('✅ Filling pre-chat form...');
-      await fullNameField.fill(name);
-      await iframe.locator('input[placeholder="Enter Email"]').fill(email);
-
-      const phoneField = iframe.locator('input[name="phoneNumber"]');
-      await phoneField.press('Control+A');
-      await phoneField.press('Backspace');
-      await phoneField.type(phone);
-
-      await iframe.locator('textarea[placeholder="Enter Message"]').fill('This is a dummy pre-chat message.');
-      await iframe.locator('p:has-text("Submit")').click();
-      await newTab.waitForTimeout(1500);
-    }
-
+    const chatsBtn = iframe.locator('button:has(span:text("Chats"))');
+    const vectorIcon = iframe.locator('div.inline-block.bg-current.h-5.w-5');
     const messageBox = iframe.locator('textarea[placeholder="Write your message..."]');
-    await messageBox.waitFor({ state: 'visible', timeout: 10000 });
-    await messageBox.fill('Hello, this is an automated message!');
-    await newTab.keyboard.press('Enter');
-    await newTab.waitForTimeout(3000);
+    const preChatName = iframe.locator('input[placeholder="Enter Full Name"]');
+
+    let isPreChatVisible = false;
+    let isChatBoxVisible = false;
+
+    try { isPreChatVisible = await preChatName.isVisible({ timeout: 3000 }); } catch { }
+    try { isChatBoxVisible = await messageBox.isVisible({ timeout: 3000 }); } catch { }
+
+    if (isPreChatVisible || isChatBoxVisible) {
+      // Dynamically fill the pre-chat form if present
+      const timestamp = Date.now();
+      const name = `John${timestamp}`;
+      const email = `john${timestamp}@test.com`;
+      const phone = `+9198${timestamp.toString().slice(-8)}`;
+
+      if (isPreChatVisible) {
+        console.log('✅ Pre-chat detected — filling visible fields...');
+        if (await preChatName.isVisible().catch(() => false)) await preChatName.fill(name);
+
+        const emailField = iframe.locator('input[placeholder="Enter Email"]');
+        if (await emailField.isVisible().catch(() => false)) await emailField.fill(email);
+
+        const phoneField = iframe.locator('input[name="phoneNumber"]');
+        if (await phoneField.isVisible().catch(() => false)) {
+          await phoneField.press('Control+A');
+          await phoneField.press('Backspace');
+          await phoneField.type(phone);
+        }
+
+        const messageField = iframe.locator('textarea[placeholder="Enter Message"]');
+        if (await messageField.isVisible().catch(() => false)) {
+          await messageField.fill('This is a dummy pre-chat message.');
+        }
+
+        const submitBtn = iframe.locator('p:has-text("Submit")');
+        await submitBtn.click();
+        console.log('✅ Pre-chat form submitted');
+
+        await messageBox.waitFor({ state: 'visible', timeout: 10000 });
+        await messageBox.fill('Hello, this is an automated message!');
+        await newTab.keyboard.press('Enter');
+        await newTab.waitForTimeout(2000);
+        console.log('✅ Message sent after pre-chat');
+
+      } else {
+        console.log('✅ Chat box directly visible — sending message...');
+        await messageBox.fill('Hello, this is an automated message!');
+        await newTab.keyboard.press('Enter');
+        await newTab.waitForTimeout(2000);
+        console.log('✅ Message sent directly');
+      }
+
+    } else {
+      let isChatsVisible = false;
+      try { isChatsVisible = await chatsBtn.isVisible({ timeout: 3000 }); } catch { }
+
+      if (isChatsVisible) {
+        console.log('✅ Chats button found — clicking...');
+        await chatsBtn.click();
+        await newTab.waitForTimeout(1000);
+
+        try {
+          await vectorIcon.waitFor({ state: 'visible', timeout: 3000 });
+          const clickableParent = vectorIcon.locator('..');
+          await clickableParent.click();
+          console.log('✅ Vector icon clicked');
+          await newTab.waitForTimeout(1000);
+        } catch (e) {
+          console.warn('⚠️ Vector icon not found:', e);
+        }
+
+        try { isPreChatVisible = await preChatName.isVisible({ timeout: 3000 }); } catch { }
+        try { isChatBoxVisible = await messageBox.isVisible({ timeout: 3000 }); } catch { }
+
+        if (isPreChatVisible || isChatBoxVisible) {
+          const timestamp = Date.now();
+          const name = `John${timestamp}`;
+          const email = `john${timestamp}@test.com`;
+          const phone = `+9198${timestamp.toString().slice(-8)}`;
+
+          if (isPreChatVisible) {
+            console.log('✅ Pre-chat appeared after chats — filling visible fields...');
+            if (await preChatName.isVisible().catch(() => false)) await preChatName.fill(name);
+
+            const emailField = iframe.locator('input[placeholder="Enter Email"]');
+            if (await emailField.isVisible().catch(() => false)) await emailField.fill(email);
+
+            const phoneField = iframe.locator('input[name="phoneNumber"]');
+            if (await phoneField.isVisible().catch(() => false)) {
+              await phoneField.press('Control+A');
+              await phoneField.press('Backspace');
+              await phoneField.type(phone);
+            }
+
+            const messageField = iframe.locator('textarea[placeholder="Enter Message"]');
+            if (await messageField.isVisible().catch(() => false)) {
+              await messageField.fill('This is a dummy pre-chat message.');
+            }
+
+            const submitBtn = iframe.locator('p:has-text("Submit")');
+            await submitBtn.click();
+            console.log('✅ Pre-chat form submitted after chats');
+
+            await messageBox.waitFor({ state: 'visible', timeout: 10000 });
+            await messageBox.fill('Hello, this is an automated message!');
+            await newTab.keyboard.press('Enter');
+            await newTab.waitForTimeout(2000);
+            console.log('✅ Message sent after fallback pre-chat');
+
+          } else {
+            console.log('✅ Message box appeared after chats — sending message...');
+            await messageBox.fill('Hello, this is an automated message!');
+            await newTab.keyboard.press('Enter');
+            await newTab.waitForTimeout(2000);
+            console.log('✅ Message sent after fallback');
+          }
+
+        } else {
+          throw new Error('❌ No widget action succeeded after chats click.');
+        }
+      } else {
+        throw new Error('❌ Neither pre-chat, message box, nor chats icon visible — cannot proceed.');
+      }
+    }
 
     if (extractedChatId) {
       const adminUrl = `https://connect.beta.orufy.in/chats/with?chatId=${extractedChatId}&filterId=OPEN`;
@@ -193,17 +245,11 @@ async function run(index) {
     }
   }
 
-  await browser.close();
-  console.log(`✅ Finished run [${index}]. Restarting...\n`);
+
+  await new Promise(() => { });
+
 }
 
-(async () => {
-  let i = 0;
-  while (true) {
-    try {
-      await run(i++);
-    } catch (err) {
-      console.error(`❌ Error in run [${i}]:`, err);
-    }
-  }
-})();
+run(0).catch(err => {
+  console.error('❌ Script failed:', err);
+});
