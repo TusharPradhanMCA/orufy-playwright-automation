@@ -5,7 +5,7 @@ const OpenAI = require('openai'); // For interacting with OpenAI API
 
 // Initialize OpenAI client
 const openai = new OpenAI({
-  apiKey: 'sk-fuR4JV9ULYQtoGCx5ll93AtqOLUOBvgxrj0R_6wUEUT3BlbkFJP-HE6uvHSsjCaw2jUESOAqr3fmbSxaTBk9lRbeHjYA' // 🔐 Replace with a secure key
+  apiKey: 'API-KEY' // 🔐 Replace with a secure key
 });
 
 (async () => {
