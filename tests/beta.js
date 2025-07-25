@@ -9,7 +9,7 @@ async function run(index) {
   });
 
   const page = await context.newPage();
-  console.log(`\n🔁 [${index}] Navigating to beta.orufy.in`);
+  console.log(`\n🔁 Navigating to beta.orufy.in`);
   await page.goto('https://beta.orufy.in');
 
   const links = page.locator('a[href="https://beta.orufy.in/connect"]');
