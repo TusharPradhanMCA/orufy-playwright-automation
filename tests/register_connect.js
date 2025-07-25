@@ -22,7 +22,7 @@ const lastNames = ['Jangid', 'Verma', 'Patel', 'Kumar', 'Gupta', 'Joshi', 'Biyan
   });
 
   const page = await context.newPage();
-  await page.goto('https://beta.orufy.in/register?redirect=CHAT_APP&plan=BASIC');  // https://orufy.com/register?redirect=CHAT_APP
+  await page.goto('https://beta.orufy.in/register?redirect=CHAT_APP&plan=PREMIUM');  // https://orufy.com/register?redirect=CHAT_APP
 
   const uniqueId = Date.now();
   const email = `tushar+${uniqueId}@orufy.com`;
